@@ -11,4 +11,4 @@ var captureRequest = new CaptureRequest
     Amount = 100
 };
 
-await _api.Payments.CaptureAsync(paymentId, captureRequest);
+await api.Payments.CaptureAsync(paymentId, captureRequest);
