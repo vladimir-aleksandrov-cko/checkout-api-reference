@@ -11,4 +11,4 @@ var refundRequest = new RefundRequest
     Amount = 100
 };
 
-await _api.Payments.RefundAsync(paymentId, refundRequest);
+await api.Payments.RefundAsync(paymentId, refundRequest);
