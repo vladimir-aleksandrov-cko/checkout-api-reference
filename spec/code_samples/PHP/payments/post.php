@@ -1,8 +1,8 @@
 <?php
 
-$checkout = new CheckoutApi('{secret_key_goes_here}');
+$checkout = new CheckoutApi('your secret key');
 
-$method = new TokenSource('{token_id_goes_here}');
+$method = new TokenSource('tok_ubfj2q76miwundwlk72vxt2i7q');
 $payment = new Payment($method, 'USD');
 
 $payment->amount = 5600;
@@ -11,14 +11,14 @@ $payment->reference = 'ORD-090857';
 $payment->threeDs = new ThreeDS(true);
 
 try {
-    $result = $checkout->payments()->request($payment);
+    $details = $checkout->payments()->request($payment);
 
-    $redirection = $result->getRedirection();
+    $redirection = $details->getRedirection();
     if($redirection) {
         return $redirection;
     }
 
-    return $result;
+    return $details;
 
 } catch (CheckoutModelException $ex) {
     return $ex->getBody();

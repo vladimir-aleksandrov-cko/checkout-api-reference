@@ -1,12 +1,6 @@
 <?php
 
-$checkout = new CheckoutApi('{secret_key_goes_here}');
-$paymentID = '{pay_id}';
+$checkout = new CheckoutApi('your secret key');
+$paymentID = 'pay_y3oqhf46pyzuxjbcn2giaqnb44';
 
-try {
-
-    return $checkout->payments()->voids($paymentID, '{reference}');
-
-} catch (CheckoutHttpException $ex) {
-    return $ex->getBody();
-}
+return $checkout->payments()->void(new Voids($paymentID));

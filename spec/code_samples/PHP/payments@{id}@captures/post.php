@@ -1,13 +1,14 @@
 <?php
 
-$checkout = new CheckoutApi('{secret_key_goes_here}');
-$paymentID = '{pay_id}';
-$captureAmount = 100; // 0 or false for full capture
+$checkout = new CheckoutApi('your secret key');
+$paymentID = 'pay_y3oqhf46pyzuxjbcn2giaqnb44';
 
-try {
+// Full Capture
+$refund = new Capture($paymentID);
 
-    return $checkout->payments()->capture($paymentID, $captureAmount = 100, '{reference}');
+// Or partial capture
+$refund = new Capture($paymentID);
+$refund->reference = 'your reference';
+$refund->amount = 100;
 
-} catch (CheckoutHttpException $ex) {
-    return $ex->getBody();
-}
+return $checkout->payments()->capture($refund);

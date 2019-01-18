@@ -1,16 +1,10 @@
 <?php
 
-$checkout = new CheckoutApi('{secret_key_goes_here}');
-$threeDsSessionId = '{sid}';
+$checkout = new CheckoutApi('your secret key');
+$threeDsSessionId = 'sid_y3oqhf46pyzuxjbcn2giaqnb44';
 
-try {
+$details = $checkout->payments()->details($threeDsSessionId);
 
-    $result = $checkout->payments()->details($threeDsSessionId);
-
-   	if($result->isSuccessful()) {
-   		return $result->getSourceId();
-   	}
-
-} catch (CheckoutHttpException $ex) {
-    return $ex->getBody();
+if($details->isSuccessful()) {
+    return $details->getSourceId();
 }
