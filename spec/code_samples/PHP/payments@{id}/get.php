@@ -5,6 +5,6 @@ $threeDsSessionId = 'sid_y3oqhf46pyzuxjbcn2giaqnb44';
 
 $details = $checkout->payments()->details($threeDsSessionId);
 
-if($details->isSuccessful()) {
+if ($details->isSuccessful()) {
     return $details->getSourceId();
 }

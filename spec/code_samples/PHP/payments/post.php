@@ -8,13 +8,13 @@ $payment = new Payment($method, 'USD');
 $payment->amount = 5600;
 $payment->capture = false;
 $payment->reference = 'ORD-090857';
-$payment->threeDs = new ThreeDS(true);
+$payment->threeDs = new ThreeDs(true);
 
 try {
     $details = $checkout->payments()->request($payment);
 
     $redirection = $details->getRedirection();
-    if($redirection) {
+    if ($redirection) {
         return $redirection;
     }
 
