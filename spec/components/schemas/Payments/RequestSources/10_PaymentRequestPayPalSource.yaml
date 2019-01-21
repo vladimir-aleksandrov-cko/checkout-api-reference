@@ -1,0 +1,11 @@
+type: object
+description: PayPal Source
+required:
+  - reference
+allOf:
+  - $ref: "#/components/schemas/PaymentRequestSource"
+  - type: object
+    properties:
+      reference:
+        type: string
+        description: A unique payment reference identifer
