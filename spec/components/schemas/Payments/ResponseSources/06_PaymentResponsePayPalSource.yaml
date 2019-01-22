@@ -1,5 +1,4 @@
 type: object
-description: A PayPal payment source
 allOf:
   - $ref: "#/components/schemas/PaymentResponseSource"
   - type: object
