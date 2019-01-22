@@ -8,4 +8,4 @@ allOf:
     properties:
       reference:
         type: string
-        description: A unique payment reference identifer
+        description: A unique payment reference identifier per successful payment
