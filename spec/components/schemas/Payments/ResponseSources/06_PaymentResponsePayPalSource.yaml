@@ -6,4 +6,4 @@ allOf:
     properties:
       reference:
         type: string
-        description: The unique payment reference identifer from the payment request
+        description: The unique payment reference identifier from the payment request
