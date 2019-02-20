@@ -4,7 +4,7 @@ post:
   summary: Request a payment
   description: |
     Checkout.com supports payments from a variety of sources, from cards to
-    SEPA direct debits. The source of payment must be specified using the `source.type` field along with any source specific data.
+    SEPA direct debits, to a variety of destinations. The source or destination of payment must be specified using the `source.type` or `destination.type` field along with any source or destination specific data.
 
     To verify the success of the payment, check the `approved` field in the response.
 
