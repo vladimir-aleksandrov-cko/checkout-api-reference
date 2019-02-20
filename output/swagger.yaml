@@ -2518,7 +2518,7 @@ components:
       #       last_name:
       #         description: The payment destination owner's last name
       #         example: Smith
-    03_PaymentRequestCardSource:
+    03_PaymentRequestCardDestination:
       # type: object
       # description: A card payment destination
       #   required:
