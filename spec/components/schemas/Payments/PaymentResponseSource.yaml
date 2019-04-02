@@ -15,6 +15,9 @@ discriminator:
     safetypay: '#/components/schemas/09_PaymentResponseSafetyPaySource'
     sofort: '#/components/schemas/10_PaymentResponseSofortSource'
     bancontact: '#/components/schemas/15_PaymentResponseBancontactSource'
+    wechat-qr: '#/components/schemas/16_PaymentResponseWeChat QRSource'
+    wechat-web: '#/components/schemas/17_PaymentResponseWeChat WebSource'
+    unionpay: '#/components/schemas/18_PaymentResponseUnionpaySource'
 required:
   - type
 

@@ -15,8 +15,14 @@ var syncPaymentSources = function()
   syncPaymentResponse('Ideal', 'http://sb-gateway-internal.cko.lon/ideal-internal-api/relations/gw/payment', '05');
   syncPaymentRequest('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/pay', '10');
   syncPaymentResponse('Klarna', 'http://sb-gateway-internal.cko.lon/klarna-internal/relations/gw/payment', '06');
-  syncPaymentResponse('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/pay', '15');
+  syncPaymentRequest('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/pay', '15');
   syncPaymentResponse('Bancontact', 'http://sb-gateway-internal.cko.lon/ppro-internal/bancontact/relations/gw/payment', '15');
+  syncPaymentRequest('WeChat QR', 'http://sb-gateway-internal.cko.lon/fomo-internal/wechat-qr/relations/gw/pay', '16');
+  syncPaymentResponse('WeChat QR', 'http://sb-gateway-internal.cko.lon/fomo-internal/wechat-qr/relations/gw/payment', '16');
+  syncPaymentRequest('WeChat Web', 'http://sb-gateway-internal.cko.lon/fomo-internal/wechat-web/relations/gw/pay', '17');
+  syncPaymentResponse('WeChat Web', 'http://sb-gateway-internal.cko.lon/fomo-internal/wechat-web/relations/gw/payment', '17');
+  syncPaymentRequest('Unionpay', 'http://sb-gateway-internal.cko.lon/fomo-internal/unionpay/relations/gw/pay', '18');
+  syncPaymentResponse('Unionpay', 'http://sb-gateway-internal.cko.lon/fomo-internal/unionpay/relations/gw/payment', '18');
 }
 
 var syncPaymentRequest = function(paymentSourceName, paymentSpecUrl, outputFilePrefix) {
@@ -77,7 +83,9 @@ var getFunctionToBuildPaymentResponse = function(paymentSourceName) {
   return function(responseBody) {
     var properties = responseBody.get.responses[200].content['application/json'].schema.properties;
     var responseDataProperties = null;
-    if (properties) {
+
+    //Some APMS don't set response_data if they don't have any. (e.g. fomo)
+    if (properties && properties.response_data) {
       responseDataProperties = properties.response_data.properties;
       if (responseDataProperties && responseDataProperties.type) {
         delete responseDataProperties.type;
