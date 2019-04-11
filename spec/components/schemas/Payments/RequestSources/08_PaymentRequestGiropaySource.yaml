@@ -10,7 +10,6 @@ allOf:
     type: object
     required:
       - purpose
-      - bic
     properties:
       purpose:
         maxLength: 27
