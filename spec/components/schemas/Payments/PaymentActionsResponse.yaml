@@ -19,6 +19,8 @@ example:
     "approved": true
     "response_code": "10000"
     "response_summary": "Approved"
+    "acquirer_transaction_id": "00745244079"
+    "acquirer_reference_number": "24021219099007452440793"
     "metadata":
       "shipping_ref": "MQIBN2"
   - "id": "act_y3oqhf46pyzuxjbcn2giaqnb44"
@@ -30,3 +32,5 @@ example:
     "response_code": "10000"
     "response_summary": "Approved"
     "reference": "ORD-5023-4E89"
+    "acquirer_transaction_id": "440644309099499894406"
+    "retrieval_reference_number": "909913440644"
