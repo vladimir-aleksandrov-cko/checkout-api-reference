@@ -20,4 +20,13 @@ allOf:
         type: string
         description: The payment destination owner's last name
         example: Smith
+      billing_address:
+        description: The payment destination owner's billing address. This will override the billing address specified during tokenisation
+        allOf:
+          - $ref: '#/components/schemas/Address'
+      phone:
+        description: The payment destination owner's phone number. This will override the phone number specified during tokenisation
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'
+
 

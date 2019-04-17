@@ -32,3 +32,15 @@ allOf:
         type: string
         description: The payment destination owner's last name
         example: Smith
+      name:
+        type: string
+        description: The card-holder name
+        example: "Bruce Wayne"
+      billing_address:
+        description: The payment destination owner's billing address
+        allOf:
+          - $ref: '#/components/schemas/Address'
+      phone:
+        description: The payment destination owner's phone number
+        allOf:
+          - $ref: '#/components/schemas/PhoneNumber'

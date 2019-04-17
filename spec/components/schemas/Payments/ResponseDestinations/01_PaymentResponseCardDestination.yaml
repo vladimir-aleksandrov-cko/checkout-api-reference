@@ -6,8 +6,6 @@ allOf:
     required:
       - expiry_month
       - expiry_year
-      - first_name
-      - last_name
       - last4
       - fingerprint
       - bin
@@ -21,13 +19,9 @@ allOf:
         type: integer
         description: The four-digit expiry year
         example: 2025
-      first_name:
+      name:
         type: string
-        description: The card-holder first name
-        example: "Bruce Wayne"
-      last_name:
-        type: string
-        description: The card-holder first name
+        description: The card-holder name
         example: "Bruce Wayne"
       scheme:
         type: string
