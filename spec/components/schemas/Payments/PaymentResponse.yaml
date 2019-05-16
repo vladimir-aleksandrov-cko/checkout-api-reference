@@ -85,7 +85,7 @@ properties:
       - $ref: '#/components/schemas/PaymentResponseDestination'
   customer:
     type: object
-    description: The customer to which this payment is linked
+    description: The customer associated with the payment if provided in the request
     allOf:
       - $ref: '#/components/schemas/PaymentResponseCustomer'
   processed_on:
