@@ -99,13 +99,13 @@
       color: rgb(1, 58, 81, 0.7);
     }
 
-    /* td.dz44d2-1 {
+    td.dz44d2-1 {
       font-family: Courier, monospace;
     }
 
     td.dz44d2-4 {
       font-family: Arial, sans-serif;
-    } */
+    }
 
     .jXDsIv {
       color: #fd755f!important;
@@ -116,30 +116,6 @@
       font-weight: 600!important;
       text-transform: uppercase!important;
     }
-
-    /* 
-
-     tbody {
-      border-top: 2px solid #013a51;
-    }
-
-
-    th {
-      background: #f8f8f8!important;
-      color: #013a51!important;
-    }
-
-    td {
-      background: white!important;
-    }
-
-    tr:first-of-type > .ehjTDN, tr.last > .ehjTDN {
-        border-left-width: 0px;
-        background-size: 1px 100%;
-        background-position: left top;
-        background-repeat: no-repeat;
-    } 
-    */
 
     /* Successful response */
 
@@ -188,16 +164,17 @@
     /* LEFT MENU */ 
 
     .menu-content {
-      background: rgb(1, 58, 81, 0.1)!important;
+      background: #f8f8f8!important;
+      top: 66px!important;
     }
 
     /* Search box */
 
     div[role=search] {
-        margin: 10px 20px!important;
-        border: 1px solid rgb(1, 58, 81, 0.2);
-        border-radius: 3px;
-        background: #f8f8f8;
+      margin: 10px 20px!important;
+      border: 1px solid rgb(1, 58, 81, 0.2);
+      border-radius: 3px;
+      background: #f8f8f8;
     }
 
     .search-input {
@@ -241,14 +218,12 @@
       display: none;
     }
 
-    /* Change colour of endpoint drop-down */ 
+    /* Endpoint drop-down */ 
 
     .jmkkdP, .fegejV {
       background-color: rgb(1, 58, 81, 0.8)!important;
       border-radius: 0!important;
     }
-
-    /* Endpoint drop-down */
 
     .nrhuz6-4.gWOwls {
       box-shadow: none!important;
@@ -357,6 +332,30 @@
     .scrollbar-container ul:first-child+div {
       display: none;
     }
+
+    /* Logo */
+
+    .logo {
+      width: 260px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #f8f8f8!important;
+    }
+
+    .logo img {
+      padding: 5px;
+    }
+
+    @media (max-width: 800px) {
+      .logo {
+        display: none;
+      }
+
+      .menu-content {
+        top: 0!important;
+      }
+    }
   </style>
 </head>
 
@@ -364,6 +363,7 @@
   <redoc spec-url="./swagger.yaml" hide-loading hide-download-button>
   </redoc>
   <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+    <div class="logo"><img src="http://localhost:3000/logo.svg"></div>
 </body>
 
 </html>
