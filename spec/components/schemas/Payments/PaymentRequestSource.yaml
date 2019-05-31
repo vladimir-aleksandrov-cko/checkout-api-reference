@@ -23,5 +23,5 @@ required:
 properties:
   type:
     type: string
-    description: The payment source type
+    description: The payment source type <br> *NB to make a payment with full card details, you need <a href="https://docs.checkout.com/docs/pci-compliance" target="blank">SAQ D PCI compliance</a>.*
     example: "card"
