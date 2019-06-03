@@ -12,15 +12,15 @@ allOf:
       description:
         maxLength: 27
         type: string
-        description: description
+        description: A description of the order
       bic:
         maxLength: 11
         type: string
-        description: "BIC (8 or 11-digits) BIC of the bank where the Consumer account is held.  If governing law prevents Issuers outside the Netherlands from disclosing this information, field may be omitted.\n"
+        description: The Bank Identifier Code (BIC) – 8 or 11 digits – of the bank where the consumer account is held. If governing law prevents issuers outside the Netherlands from disclosing this information, the field may be omitted.
       iban:
         maxLength: 34
         type: string
-        description: "The IBAN of the Consumer Bank account used for payment.  If governing law prevents Issuers outside the Netherlands  from disclosing this information, field may be omitted.\n"
+        description: The International Bank Account Number (IBAN) of the consumer bank account used for payment. If governing law prevents issuers outside the Netherlands from disclosing this information, the field may be omitted.
       account_holder:
         type: string
-        description: "Name of the Consumer according to the name of the account used for payment.  In the exceptional case that the consumerName cannot be retrieved by the Issuer,  this is filled with 'N/A'.  If governing law prevents Issuers outside the Netherlands from disclosing this information, field may be omitted.\n"
+        description: The name of the customer according to the account used for payment. If the customer's name cannot be retrieved by the issuer, this is filled with `N/A`.  If governing law prevents issuers outside the Netherlands from disclosing this information, the field may be omitted.
