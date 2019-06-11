@@ -217,6 +217,7 @@ label.hover {
 .nrhuz6-4.gWOwls {
     box-shadow: none!important;
     border: 1px solid #efefef;
+    background-color: #f8f8f8!important;
 }
 
 .iuqUuR {
@@ -226,7 +227,7 @@ label.hover {
 /* Code samples */
 
 .react-tabs__tab-panel, .react-tabs__tab.react-tabs__tab--selected {
-    background: #efefef!important;
+    background: #f8f8f8!important;
     color: #013a51!important;
     border-color: #013a51!important;
 }
@@ -255,13 +256,13 @@ ul>li.tab-error {
 ul>li.tab-success.react-tabs__tab--selected {
     color: #2db388!important;
     border-color: #2db388!important;
-    background: #eee!important;
+    background: #f8f8f8!important;
 }
 
 ul>li.tab-error.react-tabs__tab--selected {
     color: #fd755f!important;
     border-color: #fd755f!important;
-    background: #eee!important;
+    background: #f8f8f8!important;
 }
 
 .diZwLN>ul>li {
@@ -284,15 +285,19 @@ ul>li.tab-error.react-tabs__tab--selected {
 /* Code samples */
 
 span.property.token.string {
-    color: rgb(1, 58, 81)!important;
+    color: #1d75b3!important;
 }
 
 span.token.string {
-    color: rgb(1, 58, 81, 0.7)!important
+    color: #b35e14!important
 }
 
 span.token.number {
-    color: #00aeef!important;
+    color: #75438a!important;
+}
+
+span.token.keyword {
+	color: #DB7093!important;
 }
 
 .egwcPy, .iJUwRU {
