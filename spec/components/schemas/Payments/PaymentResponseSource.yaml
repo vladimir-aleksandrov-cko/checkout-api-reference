@@ -11,11 +11,12 @@ discriminator:
     giropay: '#/components/schemas/PaymentResponseGiropaySource'
     ideal: '#/components/schemas/PaymentResponseIdealSource'
     klarna: '#/components/schemas/PaymentResponseKlarnaSource'
+    knet: '#/components/schemas/PaymentResponseKnetSource'
     poli: '#/components/schemas/PaymentResponsePoliSource'
-    qiwi: '#/components/schemas/PaymentResponseQiwiSource'
-    safetypay: '#/components/schemas/PaymentResponseSafetyPaySource'
     sofort: '#/components/schemas/PaymentResponseSofortSource'
-
+    bancontact: '#/components/schemas/PaymentResponseBancontactSource'
+    fawry: '#/components/schemas/PaymentResponseFawrySource'
+    qpay: '#/components/schemas/PaymentResponseQPaySource'
 required:
   - type
 
