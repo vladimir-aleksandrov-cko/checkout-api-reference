@@ -34,7 +34,7 @@ allOf:
         example: Smith
       name:
         type: string
-        description: The card-holder name
+        description: The cardholder's name
         example: "Bruce Wayne"
       billing_address:
         description: The payment destination owner's billing address

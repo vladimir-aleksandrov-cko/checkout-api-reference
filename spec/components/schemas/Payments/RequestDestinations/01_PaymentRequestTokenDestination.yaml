@@ -10,7 +10,7 @@ allOf:
     properties:
       token:
         type: string
-        description: The Checkout.com token for example a card or wallet or token
+        description: The Checkout.com token (e.g., a card, wallet or token)
         example: tok_ubfj2q76miwundwlk72vxt2i7q
       first_name:
         type: string
