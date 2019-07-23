@@ -22,6 +22,11 @@ properties:
     type: object
     allOf:
       - $ref: '#/components/schemas/PaymentResponseSource'
+  destination:
+    description: The destination of the payment
+    type: object
+    allOf:
+      - $ref: '#/components/schemas/PaymentResponseDestination'
   amount:
     type: integer
     description: The original payment amount
@@ -66,7 +71,8 @@ properties:
       - Partially Refunded
       - Refunded
       - Declined
-      - Canceled
+      - Cancelled
+      - Paid
     example: Authorized
   3ds:
     type: object
