@@ -49,6 +49,8 @@ tags:
     description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
   - name: Events
     description: Use events to monitor and get insights into your transactions.
+  - name: Disputes
+    description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
