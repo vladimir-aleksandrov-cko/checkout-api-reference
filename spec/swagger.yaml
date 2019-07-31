@@ -20,10 +20,10 @@ info:
     <a href="https://github.com/checkout/checkout-sdk-net" target="blank">.NET</a>, <a href="https://github.com/checkout/checkout-sdk-php" target="blank">PHP</a> and <a href="https://github.com/checkout/checkout-sdk-python/tree/unified-payments" target="blank">Python</a>).  
 
 
-    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, all using the same integration.
+    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration.
 
 
-    And with our webhook management and events APIs, you can keep informed of events in near real-time, enabling you to take action and keep your business running smoothly.
+    And with our webhook management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly.
 
     # Authentication
 
@@ -40,7 +40,7 @@ servers:
     description: Sandbox API
 tags:
   - name: Payments
-    description: Process and manage payments from a variety of sources all within one integration.
+    description: Process and manage payments from a variety of sources and to various destinations all within one integration.
   - name: Sources
     description: Create a payment source for a customer that you can use for one or more payments.
   - name: Tokens
