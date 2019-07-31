@@ -11,4 +11,4 @@ allOf:
     properties:
       order_id:
         type: string
-        description: The Klarna order identifier
+        description: 'Klarna order identifier'

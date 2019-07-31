@@ -2,7 +2,7 @@
 # Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
 ###
 type: object
-description: Eps Source
+description: 'Eps Source'
 allOf:
   -
     $ref: '#/components/schemas/PaymentRequestSource'
@@ -14,8 +14,8 @@ allOf:
       purpose:
         maxLength: 27
         type: string
-        description: The purpose of the payment as appearing on the customer''s bank statement.
+        description: 'Purpose of the payment as appearing on customer''s bank statement.'
       bic:
         maxLength: 11
         type: string
-        description: The Bank Identfier Code (8 or 11 digits)
+        description: 'BIC (8 or 11-digits)'

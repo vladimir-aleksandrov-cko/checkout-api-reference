@@ -14,11 +14,11 @@ allOf:
       purpose:
         maxLength: 27
         type: string
-        description: The purpose of the payment as appearing on the customer's bank statement.
+        description: 'Purpose of the payment as appearing on customer''s bank statement.'
       bic:
         maxLength: 11
         type: string
-        description: The Bank Identifier Code (8 or 11 digits)
+        description: 'BIC (8 or 11-digits)'
       info_fields:
         maxItems: 5
         type: array
@@ -28,9 +28,9 @@ allOf:
             label:
               maxLength: 30
               type: string
-              description: An additional information field which is shown on the payment form (label)
+              description: 'Additional information field which is shown on the payment form (label)'
             text:
               maxLength: 80
               type: string
-              description: An additional information field which is shown on the payment form (text)
+              description: 'Additional information field which is shown on the payment form (text)'
           additionalProperties: false
